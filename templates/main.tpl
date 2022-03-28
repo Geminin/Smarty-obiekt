@@ -9,14 +9,16 @@
 	<title>{$page_title|default:"Tytuł domyślny"}</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
+
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="{$conf->$conf->app_url}/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{$conf->$conf->app_url}/assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{$conf->app_url}/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{$conf->app_url}/assets/css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="{$conf->$conf->app_url}/assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="{$conf->$conf->app_url}/assets/css/main.css">
+	<link rel="stylesheet" href="{$conf->app_url}/assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="{$conf->app_url}/assets/css/main.css">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -41,9 +43,9 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Projekty <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 
-							<li><a href="app/Calc/alc.php">Kalkulator</a></li>
+							<li><a href="/Calc/calc.php">Kalkulator</a></li>
 
-							<li><a href="app/Cred/cred.php">Kalkulator Kredytowy</a></li>
+							<li><a href="/Cred/cred.php">Kalkulator Kredytowy</a></li>
 
 							<li><a href="">Coming Soon</a></li>
 
@@ -76,7 +78,9 @@
 
 	<!-- Intro -->
 	<div class="container text-center">
-		
+		{block name=whitey} 
+
+		{/block}
 
 	</div>
 	<!-- /Intro-->
@@ -85,9 +89,7 @@
         <!-- Kolumny -->
     
 	    <div class="jumbotron top-space">
-			{block name=whitey} 
-
-			{/block}
+		
 
 		    <div class="container">
 				
@@ -98,32 +100,32 @@
 			
 			    <div class="row">
 				    <div class="col-md-3 col-sm-6 highlight">
-					-----------------------------
+				
 					{block name=k1} 
 
 					{/block}
-					-----------------------------
+				
 				    </div>
 				    <div class="col-md-3 col-sm-6 highlight">
-					-----------------------------
+				
 					{block name=k2} 
 
 					{/block}
-					-----------------------------   
+				 
 				    </div>
 				    <div class="col-md-3 col-sm-6 highlight">
-					-----------------------------
+				
 					{block name=k3} 
 
 					{/block}
-					-----------------------------    
+				  
 				    </div>
 				    <div class="col-md-3 col-sm-6 highlight">
-					-----------------------------
+					
 					{block name=k4} 
 
 					{/block}
-					-----------------------------   
+				  
 				    </div>
 			    </div> <!-- /row  -->
 			{block name=Cform}

@@ -4,4 +4,4 @@ require_once dirname(__FILE__).'/config.php';
 
 
 
-include $conf->root_path.'/Calc/calc.php';
+include $conf->root_path.'/app/Control.php';

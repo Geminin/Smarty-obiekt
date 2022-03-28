@@ -3,8 +3,8 @@
 
 require_once $conf->root_path.'/libs/Smarty.class.php';
 require_once $conf->root_path.'/libs/Messages.class.php';
-require_once $conf->root_path.'/Calc/CalcForm.class.php';
-require_once $conf->root_path.'/Calc/CalcRes.class.php';
+require_once $conf->root_path.'/app/Calc/CalcForm.class.php';
+require_once $conf->root_path.'/app/Calc/CalcRes.class.php';
 
 
 
@@ -26,7 +26,7 @@ class CalcCtrl {
 	
 	
 	public function getParams(){
-		$this->form->kwota = isset($_REQUEST ['x']) ? $_REQUEST ['x'] : null;
+		$this->form->x = isset($_REQUEST ['x']) ? $_REQUEST ['x'] : null;
 		$this->form->y = isset($_REQUEST ['y']) ? $_REQUEST ['y'] : null;
 		$this->form->op = isset($_REQUEST ['op']) ? $_REQUEST ['op'] : null;
 	}
@@ -114,9 +114,7 @@ class CalcCtrl {
 		$smarty = new Smarty();
 		$smarty->assign('conf',$conf);
 		
-		$smarty->assign('page_title','Przykład 05');
-		$smarty->assign('page_description','Obiektowość. Funkcjonalność aplikacji zamknięta w metodach różnych obiektów. Pełen model MVC.');
-		$smarty->assign('page_header','Obiekty w PHP');
+
 				
 		$smarty->assign('hide_intro',$this->hide_intro);
 		
@@ -124,6 +122,6 @@ class CalcCtrl {
 		$smarty->assign('form',$this->form);
 		$smarty->assign('res',$this->result);
 		
-		$smarty->display($conf->root_path.'/Calc/view_calc.html');
+		$smarty->display($conf->root_path.'/app/Calc/view_calc.html');
 	}
 }
