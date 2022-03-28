@@ -67,9 +67,9 @@
 	<header id="head">
 		<div class="container">
 			<div class="row">
-				<h1 class="lead">{block name=tytul}   {/block}</h1>
+				<h1 class="lead">{$tytul|default:"Tytuł domyślny"}</h1>
 				
-				<p class="tagline">{block name=under}   {/block}</p>
+				<p class="tagline">{$under|default:"opis domyślny"}</p>
 				
 			</div>
 		</div>

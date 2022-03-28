@@ -10,10 +10,11 @@ require_once $conf->root_path.'/app/Calc/CalcRes.class.php';
 
 class CalcCtrl {
 
-	private $msgs;   
+	private $msgs;
+	//private $infos;   nie użyte
 	private $form;   
 	private $result; 
-	private $hide_intro; 
+	
 
 	
 	public function __construct(){
@@ -21,7 +22,7 @@ class CalcCtrl {
 		$this->msgs = new Messages();
 		$this->form = new CalcForm();
 		$this->result = new CalcResult();
-		$this->hide_intro = false;
+		
 	}
 	
 	
@@ -38,7 +39,7 @@ class CalcCtrl {
 			
 			return false; 
 		} else { 
-			$this->hide_intro = true; 
+			
 		}
 		
 		
@@ -114,9 +115,10 @@ class CalcCtrl {
 		$smarty = new Smarty();
 		$smarty->assign('conf',$conf);
 		
-
+		$smarty->assign('tytul','Kalkulator');
+		$smarty->assign('under','Potrafi wykonywać proste działania');
 				
-		$smarty->assign('hide_intro',$this->hide_intro);
+		
 		
 		$smarty->assign('msgs',$this->msgs);
 		$smarty->assign('form',$this->form);
