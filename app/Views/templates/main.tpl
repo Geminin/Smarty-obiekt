@@ -19,6 +19,8 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="{$conf->app_url}/assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="{$conf->app_url}/assets/css/main.css">
+	
+
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -234,5 +236,6 @@
 	<script src="{$conf->app_url}/assets/js/headroom.min.js"></script>
 	<script src="{$conf->app_url}/assets/js/jQuery.headroom.min.js"></script>
 	<script src="{$conf->app_url}/assets/js/template.js"></script>
+
 </body>
 </html>

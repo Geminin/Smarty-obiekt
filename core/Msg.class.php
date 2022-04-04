@@ -1,5 +1,8 @@
-<?php
-class Messages {
+<?php 
+
+namespace core;
+
+class Msg {
 	private $errors = array ();
 	private $infos = array ();
 	private $num = 0;

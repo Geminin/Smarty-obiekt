@@ -1,9 +1,13 @@
-{extends file=$conf->root_path|cat:"/templates/main.tpl"}
+{extends file="main.tpl"}
 
 {block name=tytul}   {/block}
 {block name=under}   {/block}
 
-{block name = whitey} coś {/block}
+{block name = whitey} 
+Kiedyś zrobie inny kalkulator <br>
+Także spokojnie<br>
+Kolejny walutowy będzie jak będą SQL dodawany
+{/block}
 
 {block name=form} <form action="{$conf->action_root}calcCompute" class="pure-form pure-form-stacked" method="post"> {/block}
 
