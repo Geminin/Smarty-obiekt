@@ -56,7 +56,7 @@
 						</ul>
 					</li>
 					
-					<!-- <li><a class="btn" href="/app/security/logout.php">Logout</a></li> -->
+					{block name=log}  {/block}
 					
 				</ul>
 			</div><!--/.nav-collapse -->

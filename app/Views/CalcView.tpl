@@ -1,4 +1,8 @@
+
 {extends file="main.tpl"}
+
+{block name=logt} <li> <a href="{$conf->action_url}logout"  class="btn">wyloguj</a> </li>{/block}
+
 
 {block name=tytul}   {/block}
 {block name=under}   {/block}
@@ -35,40 +39,13 @@ Kolejny walutowy będzie jak będą SQL dodawany
 {/block}
 
 {block name=k4}
-    {* wyświeltenie listy błędów, jeśli istnieją *}
-    {if $msgs->isError()}
-    	<h4>Wystąpiły błędy: </h4>
-    	<ol class="err">
-    	{foreach $msgs->getErrors() as $err}
-    	{strip}
-    		<li>{$err}</li>
-    	{/strip}
-    	{/foreach}
-    	</ol>
-    {/if}
-
-    {* wyświeltenie listy informacji, jeśli istnieją *}
-    {if $msgs->isInfo()}
-    	<h4>Informacje: </h4>
-    	<ol class="inf">
-    	{foreach $msgs->getInfos() as $inf}
-    	{strip}
-    		<li>{$inf}</li>
-    	{/strip}
-    	{/foreach}
-    	</ol>
-    {/if}
-
-    {if isset($res->result)}
-    	<h4>Wynik</h4>
-    	<p class="res">
-    	{$res->result}
-    	</p>
-    {/if}
+    {include file='messages.tpl'}
+	Wynik: {$res->result}
 {/block}
 
 
 {block name=Cform} 
 <button type="submit" class="pure-button">Oblicz</button>
+
 </form> 
 {/block}

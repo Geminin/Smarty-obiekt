@@ -1,23 +1,12 @@
 <?php
 require_once 'init.php';
 
-switch ($action) {
-	default : 
-	
-		$control = new app\Controllers\CalcControl();
-		$control->generateView ();
-	break;
-	case 'calcCompute' :
-		
-		$control = new app\Controllers\CalcControl();
-		$control->process ();
-	break;
-	case 'action1' :
-		
-		print('hello');
-	break;
-	case 'action2' :
-		
-		print('goodbye');
-	break;
-}
+getRouter()->setDefaultRoute('calcShow'); // akcja/ścieżka domyślna
+getRouter()->setLoginRoute('login'); // akcja/ścieżka na potrzeby logowania (przekierowanie, gdy nie ma dostępu)
+
+getRouter()->addRoute('calcShow',    'CalcControl',  ['user','admin']);
+getRouter()->addRoute('calcCompute', 'CalcControl',  ['user','admin']);
+getRouter()->addRoute('login',       'LoginControl');
+getRouter()->addRoute('logout',      'LoginControl', ['user','admin']);
+
+getRouter()->go();
