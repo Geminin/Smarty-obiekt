@@ -45,13 +45,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Projekty <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 
-							<li><a href="/Calc/calc.php">Kalkulator</a></li>
 
-							<li><a href="/Cred/cred.php">Kalkulator Kredytowy</a></li>
-
-							<li><a href="">Coming Soon</a></li>
-
-							<li><a href="">Coming Soon</a></li>
 
 						</ul>
 					</li>
